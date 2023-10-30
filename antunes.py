@@ -1,7 +1,10 @@
 print ('ATHLETE DEVELOPMENT')
 
-input('diga SIM caso deseje entrar:')
-
+while True:
+    escolha = input('diga SIM caso deseje entrar:')
+    if(escolha[0] == 's' or escolha[0] == 'S'):
+        break
+    
 print('Bom dia, aqui falamos da Atlhete Development, analisamos a media que os jogadores correm, em diferentes ligas na europa.')
 nome_ligas=['','premier league','league one','bundesliga','laliga']
 valores=[
@@ -26,6 +29,6 @@ while True:
     for i in range(len(l)):
         print(f'A liga {nome_ligas[int(l[i])]} tem a media {sum(valores[int(l[i])])/4}')
     resp=input('  gostou de saber isso?caso queira saber a media de alguma outra liga digite (sim) siga a lista abaixo, caso não queira digite (não):')
-    if(resp=='nao' or resp=='não'):
+    if(resp.upper())[0] == "N":
         break
 print('então espero que tenham gostado, muito obrigado tenha um bom dia!')
